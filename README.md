@@ -1,4 +1,4 @@
-# `react-local-boundary`
+# `react-local-boundary` [![Build Status](https://travis-ci.org/joshblack/react-local-boundary.svg?branch=master)](https://travis-ci.org/joshblack/react-local-boundary)
 
 ## Usage
 
@@ -6,6 +6,27 @@
 npm install react-local-boundary --save
 # or
 yarn add react-local-boundary
+```
+
+```js
+import React from 'react';
+import LocalBoundary from 'react-local-boundary';
+
+const Fallback = (error) => (
+  <div className="Error">
+    Error: {error.message}
+  </div>
+);
+
+class MyComponent extends React.Component {
+  render() {
+    return (
+      <LocalBoundary renderError={Fallback}>
+        <ComponentThatThrows />
+      </LocalBoundary>,
+    );
+  }
+}
 ```
 
 ## Why?
