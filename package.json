@@ -1,7 +1,12 @@
 {
   "name": "react-local-boundary",
   "version": "0.1.0",
+  "description": "React component for handling inconsistent application state",
   "main": "lib/index.js",
+  "homepage": "https://github.com/joshblack/react-local-boundary",
+  "bugs": "https://github.com/joshblack/react-local-boundary/issues",
+  "repository": "joshblack/react-local-boundary",
+  "author": "Josh Black <joshblack@us.ibm.com>",
   "license": "MIT",
   "files": [
     "lib"
@@ -56,5 +61,6 @@
       "prettier",
       "git add"
     ]
-  }
+  },
+  "dependencies": {}
 }

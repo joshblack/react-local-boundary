@@ -4,6 +4,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {unstable_renderSubtreeIntoContainer} from 'react-dom';
 
+type Props = {|
+  className?: string,
+  children: React.Element<*>,
+  renderError: (error: Error) => React.Element<*>,
+|};
+
 /**
  * LocalBoundary exists to help out situations where a developer is trying to
  * handle arbitrary errors in a component subtree.
@@ -20,7 +26,7 @@ import {unstable_renderSubtreeIntoContainer} from 'react-dom';
  * and will capture any errors that occur and render the corresponding error
  * handler/component.
  */
-export default class LocalBoundary extends React.Component {
+export default class LocalBoundary extends React.Component<*, Props, *> {
   _container: HTMLElement;
 
   static propTypes = {
