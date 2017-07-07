@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocalBoundary Component should render a valid child component 1`] = `
+<LocalBoundary
+  renderError={[Function]}
+>
+  <div />
+</LocalBoundary>
+`;
